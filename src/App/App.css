@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+/* @font-face {
+  font-family: 'Acme', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Acme');
+} */
+
+body{
+  background-color: #f2f2f2;
+}
+.header {
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 80px;
+  font-family: 'Acme', sans-serif;
+}
+
+h2{
+  text-align: center;
+
+}
+.footer{
+  width: 100%;
+  text-align: center;
+  background-color: #00001a;
+  list-style: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  color: white;
+}
+
+
+
+
+/* @keyframes App-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
