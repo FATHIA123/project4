@@ -4,6 +4,8 @@ import axios from 'axios';
 import {  Route , Link, Switch } from 'react-router-dom';
 import Senate from '../Senate/Senate';
 import House from '../House/House';
+import Map from '../Map/Map'
+
 
 class App extends Component {
 constructor(props){
@@ -30,7 +32,8 @@ constructor(props){
       // console.log(json.data.results)
       this.setState({ senateData: json.data.results });
       // console.log(senateData)
-    });
+    }).catch(
+    )
     return (
       <div className="App">
         <nav >
@@ -41,7 +44,9 @@ constructor(props){
           <main> 
   {/* <div>{this.state.senateData.first_name}</div> */}
             <Route path="/" render={() => <Senate senate={this.state.senateData}/> } />
-            {/* <Route path="/house" render={() => <House/> } /> */}
+            {/* <Route path="/" render={() => <House/> } /> */}
+            <Route path="/" render={() => <Map/> } />
+
           </main>
 
             <footer className="footer"> 
