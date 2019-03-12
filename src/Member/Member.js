@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-            <img src="https://theunitedstates.io/images/congress/225x275/W000804.jpg" alt="map of virginia congressional districts"/>
+            <img src="https://i.imgur.com/Fc8iuhS.png" alt="map of virginia congressional districts" width='800' height='500' />
         </div>
       </div>
     );

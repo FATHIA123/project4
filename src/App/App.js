@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+// import Map from '../Map/Map'
+import House from '../House/House'
+import Member from '../Member/Member'
+import { Route } from 'react-router-dom';
+
 
 class App extends Component {
 constructor(){
@@ -22,17 +27,22 @@ constructor(){
   render() {
     return (
       <div className="App">
-        <nav >
-               
-               <h1 className= "header">Get To Know Who Represents You</h1>
-               <h2>Virginia Representatives</h2>
-            </nav>
-          <main> </main>
+        <nav >  
+          <h1 className= "header">Get To Know Who Represents You</h1>
+          <h2>Virginia Representatives</h2>
+        </nav>
 
-            <footer className="footer"> 
-               <li>Source: </li>
-               <li>Created By: </li>
-            </footer>
+        <main> 
+          <House />
+          <Route exact path='/member' render={() => <Member /> } />
+          <h2>Virginia Senators</h2>
+
+        </main>
+
+        {/* <footer className="footer"> 
+            <li>Source: </li>
+            <li>Created By: </li>
+        </footer> */}
       </div>
     );
   }
