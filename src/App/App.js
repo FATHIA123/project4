@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 // import Map from '../Map/Map'
 import House from '../House/House'
+import Senate from '../Senate/Senate'
 import Member from '../Member/Member'
 import { Route } from 'react-router-dom';
 
@@ -36,7 +37,7 @@ constructor(){
           <House />
           <Route exact path='/member' render={() => <Member /> } />
           <h2>Virginia Senators</h2>
-
+          <Senate />
         </main>
 
         {/* <footer className="footer"> 
