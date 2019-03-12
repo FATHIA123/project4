@@ -1,7 +1,8 @@
 .senate {
     display: flex;
-    justify-content: space-around;
-   flex-wrap: wrap;
-  border: 3px;
-  padding: 10px;
+    flex-direction: row;
+    /* justify-content: space-around; */
+   /* flex-wrap: wrap; */
+  /* border: 3px; */
+  /* padding: 10px; */
 }

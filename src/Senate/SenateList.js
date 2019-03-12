@@ -17,7 +17,7 @@ class SenateList extends Component {
            
         
         return (
-            <div>
+            <div >
                {oneSenator}
                </div>
             );
