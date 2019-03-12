@@ -42,10 +42,10 @@ constructor(props){
                <h2>Virginia Representatives</h2>
             </nav>
           <main> 
-  {/* <div>{this.state.senateData.first_name}</div> */}
-            <Route path="/" render={() => <Senate senate={this.state.senateData}/> } />
-            {/* <Route path="/" render={() => <House/> } /> */}
-            <Route path="/" render={() => <Map/> } />
+                  {/* <div>{this.state.senateData.first_name}</div> */}
+                  <Route path="/" render={() => <Senate senate={this.state}/> } />
+                  <Route path="/" render={() => <House house={this.state}/> } />
+                  <Route path="/" render={() => <Map/> } />
 
           </main>
 
