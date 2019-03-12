@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './House.css';
 
 class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div>
+      <div >
+        <div className="house">
             <img src="https://theunitedstates.io/images/congress/225x275/W000804.jpg" alt="robert j. whitman"/>
             <img src="http://bioguide.congress.gov/bioguide/photo/L/L000591.jpg" alt="elaine luria" width="225" height="275"/>
             <img src="https://theunitedstates.io/images/congress/225x275/S000185.jpg" alt="robert scott"/>

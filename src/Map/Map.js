@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapGL, {NavigationControl} from 'react-map-gl';
-import ReactMapGL, {Marker} from 'react-map-gl';
+// import ReactMapGL, {Marker} from 'react-map-gl';
 
 const TOKEN = 'pk.eyJ1Ijoia2lyYXJhZTIxIiwiYSI6ImNqdDRvOHhyNzAwZ2UzeXFzcDg3aTQxMHIifQ.43o72qI87GWeN3lw-tOfhg';
 

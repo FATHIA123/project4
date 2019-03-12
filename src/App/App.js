@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import {  Route , Link, Switch } from 'react-router-dom';
-import Senate from '../Senate/Senate';
+import {  Route } from 'react-router-dom';
+import Senate from '../Senate/SenateList';
 import House from '../House/House';
 import Map from '../Map/Map'
 
@@ -13,6 +13,7 @@ constructor(props){
   console.log("constructor")
   this.state = { 
     senateData: [], 
+    //array of objects 
   }
 }
 
@@ -27,11 +28,12 @@ constructor(props){
   }
 
   render() {
-    axios.get('https://api.propublica.org/congress/v1/members/senate/VA/current.json', { headers: { 'X-API-Key': 'Kj3LA8ihrq1u54ZYNFmQ2eqG0Qa1a85K9y1xFIXl'}})
+    // axios.get('https://api.propublica.org/congress/v1/members/senate/VA/current.json', { headers: { 'X-API-Key': 'Kj3LA8ihrq1u54ZYNFmQ2eqG0Qa1a85K9y1xFIXl'}})
+    axios.get('https://project4-api-backend.herokuapp.com/senator')
     .then(json => {
-      // console.log(json.data.results)
-      this.setState({ senateData: json.data.results });
-      // console.log(senateData)
+      // console.log(json.data)
+      this.setState({ senateData: json.data });
+      // console.log(this.state.senateData)
     }).catch(
     )
     return (
@@ -43,16 +45,16 @@ constructor(props){
             </nav>
           <main> 
                   {/* <div>{this.state.senateData.first_name}</div> */}
-                  <Route path="/" render={() => <Senate senate={this.state}/> } />
+                  <Route path="/" render={() => <Senate senate={this.state.senateData}/> } />
                   <Route path="/" render={() => <House house={this.state}/> } />
                   <Route path="/" render={() => <Map/> } />
 
           </main>
 
-            <footer className="footer"> 
+            {/* <footer className="footer"> 
                <li>Source: </li>
                <li>Created By: </li>
-            </footer>
+            </footer> */}
       </div>
     );
   }
