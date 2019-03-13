@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import {  Route } from 'react-router-dom';
-import Senate from '../Senate/SenateList';
 import House from '../House/House';
 import Map from '../Map/Map'
+import SenateList from '../Senate/SenateList';
+// import Showone from '../Senate/Showone';
+import Senate from '../Senate/Senate';
 
 
 class App extends Component {
@@ -12,8 +14,9 @@ constructor(props){
   super(props);
   console.log("constructor")
   this.state = { 
+    //array of 2 objects 
     senateData: [], 
-    //array of objects 
+    id:''
   }
 }
 
@@ -38,16 +41,16 @@ constructor(props){
     )
     return (
       <div className="App">
-        <nav >
-               
+             <nav > 
                <h1 className= "header">Get To Know Who Represents You</h1>
                <h2>Virginia Representatives</h2>
             </nav>
+
           <main> 
-                  {/* <div>{this.state.senateData.first_name}</div> */}
-                  <Route path="/" render={() => <Senate senate={this.state.senateData}/> } />
-                  <Route path="/" render={() => <House house={this.state}/> } />
-                  <Route path="/" render={() => <Map/> } />
+                  <Route exact path="/" render={() => <SenateList senate={this.state.senateData}/> } />
+                  <Route exact path="/" render={() => <House house={this.state}/> } />
+                  <Route exact path="/" render={() => <Map/> } />
+                  <Route exact path="/senator/:id" render={(routerProps) => <Senate senate={this.state.senateData} {...routerProps} />} />
 
           </main>
 
