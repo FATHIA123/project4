@@ -4,7 +4,7 @@ import ReactMapGL, {NavigationControl} from 'react-map-gl';
 import './Map.css'
 
 
-const TOKEN = 'pk.eyJ1Ijoia2lyYXJhZTIxIiwiYSI6ImNqdDRvOHhyNzAwZ2UzeXFzcDg3aTQxMHIifQ.43o72qI87GWeN3lw-tOfhg';
+const TOKEN = 'pk.eyJ1Ijoia2lyYXJhZTIxIiwiYSI6ImNqdDRvMHhlbzAzaDg0YW8wc3N5cWFqNmgifQ.ut1w-lL1kVt41racDTV66A';
 
 const navStyle = {
     position: 'absolute',
@@ -19,7 +19,8 @@ const navStyle = {
           viewport: {
             latitude: 37.7680,
             longitude: -78.2057,
-            zoom: 5.5,
+            zoom: 5.8,
+            minZoom: 5,
             bearing: 0,
             pitch: 0,
             width: 900,
@@ -33,14 +34,12 @@ const navStyle = {
           <ReactMapGL
             {...this.state.viewport}
             onViewportChange={(viewport) => this.setState({viewport})}
-            mapStyle="mapbox://styles/kirarae21/cjt6i1iy61p3h1flclmmg7wvk"
+            mapStyle="mapbox://styles/kirarae21/cjt799cn115r61fqmf9rmezof" 
             mapboxApiAccessToken={TOKEN}>
             <div className="nav" style={navStyle}> 
               <NavigationControl/>
             </div>
         </ReactMapGL>
-        
-          
         
       </div>
     );
