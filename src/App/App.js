@@ -5,6 +5,7 @@ import {  Route } from 'react-router-dom';
 import Senate from '../Senate/SenateList';
 import House from '../House/House';
 import Map from '../Map/Map'
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 class App extends Component {
